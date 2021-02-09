@@ -1,0 +1,29 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <!-- <th>Id</th> -->
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of studentData">
+        <!-- <td>{{p.id}}</td> -->
+        <td>{{p.name}}</td>
+        <td>{{p.email}}</td>
+        <td>{{p.phone}}</td>
+        <td>{{p.address}}</td>
+        <td>
+            <button class="btn btn-primary" (click)="onClickEdit(p)">Edit</button>
+        </td>
+        <td>
+            <button class="btn btn-warning" (click)="onClickDelete(p)">Delete</button>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
